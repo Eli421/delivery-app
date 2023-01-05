@@ -1,0 +1,35 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.repartidores {
+
+    &__heading {
+        text-align: center;
+        margin: v.$separacion 0;
+        color: v.$secundario;
+    }
+
+    &__grid {
+        @include m.tablet { 
+            @include m.grid(2, v.$separacion);
+            align-items: center;
+            margin-bottom: v.$separacion;
+         }
+    }
+
+    &__texto {
+        color: v.$secundario;
+        font-size: 1.8rem;
+        line-height: 1.5;
+        margin-top: 2rem;
+    }
+
+    &__enlace {
+        @include m.boton(v.$primario, v.$blanco);
+        margin: 3rem 0;
+
+        @include m.tablet { 
+            width: 40%;
+         }
+    }
+}
